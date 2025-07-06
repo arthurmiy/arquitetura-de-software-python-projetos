@@ -31,4 +31,13 @@ janela.title("Controle de Vendas – Smart View")
 entrada_nome = tk.Entry(janela)
 entrada_nome.pack(pady=5)
 
+botao_adicionar = tk.Button(janela, text="Adicionar Atendente", command=adicionar_atendente)
+botao_adicionar.pack()
+
+botao_resetar = tk.Button(janela, text="Resetar", command=resetar_atendentes)
+botao_resetar.pack()
+
+quadro_atendentes = tk.Frame(janela)
+quadro_atendentes.pack(pady=10)
+
 janela.mainloop()
