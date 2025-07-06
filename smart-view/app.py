@@ -19,6 +19,11 @@ def adicionar_atendente():
     atendentes.append({"nome": nome, "vendas": 0})
     entrada_nome.delete(0, tk.END)
 
+# Função para resetar os dados de todas as pessoas atendentes
+def resetar_atendentes():
+    if messagebox.askyesno("Resetar", "Tem certeza que deseja resetar todos os dados?"):
+        atendentes.clear()
+
 # Interface principal
 janela = tk.Tk()
 janela.title("Controle de Vendas – Smart View")
