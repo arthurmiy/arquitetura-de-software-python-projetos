@@ -18,15 +18,18 @@ def adicionar_atendente():
 
     atendentes.append({"nome": nome, "vendas": 0})
     entrada_nome.delete(0, tk.END)
+    atualizar_interface()
 
 # Função para resetar os dados de todas as pessoas atendentes
 def resetar_atendentes():
     if messagebox.askyesno("Resetar", "Tem certeza que deseja resetar todos os dados?"):
         atendentes.clear()
+    atualizar_interface()
 
 # Função para incrementar as vendas de atendente
 def incrementar_vendas(indice):
     atendentes[indice]["vendas"] += 1
+    atualizar_interface()
 
 # Função que desenha atendentes na interface
 def atualizar_interface():
@@ -60,5 +63,7 @@ botao_resetar.pack()
 
 quadro_atendentes = tk.Frame(janela)
 quadro_atendentes.pack(pady=10)
+
+atualizar_interface()
 
 janela.mainloop()
