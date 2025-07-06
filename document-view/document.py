@@ -19,3 +19,6 @@ def resetar():
 # Função para incrementar as vendas de atendente
 def incrementar_vendas(indice):
     atendentes[indice]["vendas"] += 1
+
+def obter_atendentes():
+    return atendentes
